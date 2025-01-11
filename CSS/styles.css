@@ -29,8 +29,10 @@
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
+  --color-secondary-dark: #a18268;
   --color-brand-dark: #465929;
-  --color-brand-light: #819b57;
+  --color-brand-light: #cfcfbc;
+  --color-brand-normal: #819b57;
 }
 
 /* Base */
@@ -39,11 +41,14 @@
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 body {
   color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
   font-family: Poppins, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -90,8 +95,8 @@ header .button {
   padding: 16px 32px;
   color: var(--color-primary-light);
   font-weight: 600;
-  background-color: var(--color-brand-light);
-  border: 2px solid var(--color-brand-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -116,12 +121,41 @@ header .button {
 }
 
 .link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
+}
+
+/* Header */
+.header {
+  background-color: lightgray;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* Hero title */
 .hero-section {
   padding: 272px 0;
+  background-image: url("../images/hero-section-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-title {
@@ -132,18 +166,25 @@ header .button {
 }
 
 .hero-title .accent {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 /* Advantages */
+.advantages-section {
+  padding: 16px;
+  background-color: var(--color-brand-normal);
+}
+
 .advantages-list {
-  color: var(--color-primary-light);
-  background-color: var(--color-brand-light);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .advantages-item {
   font-weight: 300;
   font-size: 20px;
+  color: var(--color-primary-light);
 }
 
 /* Section-title */
@@ -151,6 +192,10 @@ header .button {
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
+}
+
+.section-title.centered {
+  text-align: center;
 }
 
 .section-title .accent {
@@ -166,8 +211,18 @@ header .button {
   padding-top: 96px;
 }
 
+.tradition-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.tradition-contant {
+  max-width: 710px;
+}
+
 .traditions-text .brand {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   font-weight: 600;
 }
 
@@ -175,9 +230,28 @@ header .button {
   text-transform: uppercase;
 }
 
+.traditions-text.limited {
+  max-width: 310px;
+}
+
 /* Chief section */
 .chefs-title {
-  margin-bottom: 80px;
+  max-width: 520px;
+  margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+  content: "";
+}
+
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chief-title {
@@ -187,6 +261,29 @@ header .button {
 }
 
 /* Format section */
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+
+.formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.format-cards {
+  height: 444px;
+  padding: 24px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
+  border: 1px solid lightgrey; /*remove*/
+  border-radius: 16px;
+}
+
 .formats-title {
   margin-bottom: 80px;
 }
@@ -215,9 +312,17 @@ header .button {
 }
 
 .address-link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 .address-copyright {
   font-size: 14px;
+}
+
+.footer {
+  background-color: var(--color-primary-dark);
+  background-image: url("../images/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
