@@ -36,8 +36,14 @@
 }
 
 /* Base */
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
 }
 
 ul {
@@ -248,6 +254,21 @@ header .button {
   content: "";
 }
 
+.chefs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+}
+
+.chefs-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
@@ -261,6 +282,12 @@ header .button {
 }
 
 /* Format section */
+.format-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
 }
@@ -298,12 +325,74 @@ header .button {
   font-size: 14px;
 }
 
+/* Carousel */
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  fill: var(--color-primary-dark);
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 /* Contact section */
+.contacts-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
 .contact-title {
   margin-bottom: 16px;
 }
 
+.contact-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+
 /* Footer */
+.footer {
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  gap: 20px;
+  flex-basis: 50%;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
 .address-link {
   font-weight: 300;
   font-size: 16px;
@@ -313,6 +402,14 @@ header .button {
 
 .address-link:hover {
   color: var(--color-brand-normal);
+}
+
+.adress-icon {
+  fill: var(--color-primary-light);
+}
+
+.adress-icon:hover {
+  fill: var(--color-brand-normal);
 }
 
 .address-copyright {
