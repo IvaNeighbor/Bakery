@@ -97,7 +97,7 @@ address {
 }
 
 /* Button */
-header .button {
+.button {
   padding: 16px 32px;
   color: var(--color-primary-light);
   font-weight: 600;
@@ -111,6 +111,12 @@ header .button {
   color: var(--color-brand-dark);
   background-color: transparent;
 }
+
+/* .button:disabled {
+  color: gray;
+  background-color: lightgray;
+  border-color: currentColor;
+} */
 
 /* .button:active {
     background-color: plum;
@@ -515,21 +521,87 @@ header .button {
 /* Form */
 .form-field {
   margin-bottom: 32px;
+  position: relative;
 }
 
 .form-label {
-  display: block;
+  position: absolute;
+  top: 16px;
+  left: 42px;
 }
 
 .form-input {
   padding: 16px 42px;
   width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
   border: 1px solid var(--color-secondary-dark);
   border-radius: 8px;
   background-color: transparent;
 }
 
+/* .form-input:required {
+  background-color: blue;
+} */
+
 .form-input:focus {
   border: 1px solid var(--color-brand-normal);
   outline: none;
 }
+
+.form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.17;
+  color: var(--color-secondary-dark);
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.form-terms {
+  margin: 0 auto;
+  max-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
+}
+
+/* .checkbox {
+  position: relative;
+}
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: green;
+}
+
+.checkbox-label {
+  padding-left: 24px;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 2px;
+  content: "";
+} */
