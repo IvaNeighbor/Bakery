@@ -1,5 +1,6 @@
 .mobile-menu {
   position: fixed;
+  padding: 16px 24px;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,9 +13,46 @@
     transform: translateX(0);
   }
 
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &::before {
+    width: 160px;
+    height: 160px;
+    background-image: url("/images/modal-decorate-text.png");
+  }
+
+  &::after {
+    width: 151px;
+    height: 233px;
+    background-image: url("/images/modal-decorate-bread.png");
+  }
+
   &__btn-close {
     position: absolute;
+    border: none;
+    background-color: transparent;
     top: 16px;
     right: 24px;
+  }
+
+  &__icon-close {
+    fill: var(--color-primary-dark);
+    transition: fill 0.2s;
+  }
+
+  &__icon-close:hover {
+    fill: var(--color-brand-normal);
+  }
+
+  &__icon-logo {
+    fill: var(--color-primary-dark);
+    margin-bottom: 32px;
   }
 }

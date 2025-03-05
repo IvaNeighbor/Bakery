@@ -50,8 +50,25 @@
 
           <div class="mobile-menu">
             <button class="mobile-menu__btn-close menu-btn-close" type="button">
-              Close
+              <svg class="mobile-menu__icon-close" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
             </button>
+
+            <a href="./index.html">
+              <svg class="mobile-menu__icon-logo" width="72px" height="38px">
+                <use href="./images/icons.svg#icon-logo"></use>
+              </svg>
+            </a>
+
+            <ul class="mobile-menu__burger">
+              <li>
+                <a class="link" href="#traditions-section">Наші традиції</a>
+              </li>
+              <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
+              <li><a class="link" href="#formats-section">Формати</a></li>
+              <li><a class="link" href="#contacts-section">Контакти</a></li>
+            </ul>
           </div>
         </div>
         <!-- button call -->
@@ -339,14 +356,19 @@
         </div>
       </section>
 
-      <section class="contacts-section section" id="contacts-section">
+      <section
+        class="contacts-section section section--contacts"
+        id="contacts-section"
+      >
         <div class="container">
           <div class="contacts-section__container">
             <div class="contacts-section__form">
               <h2 class="contacts-section__title section__title">
                 Приєднуйся до мережі пекарень
               </h2>
-              <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+              <p class="text-brand-dark">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
               <form name="contact-form" autocomplete="off">
                 <div class="contacts-section__form-field input">
                   <label class="input__label visually-hidden" for="user-name"
@@ -358,6 +380,8 @@
                     id="user-name"
                     name="user-name"
                     placeholder="Ім'я"
+                    pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
+                    required
                   />
                 </div>
 
@@ -371,6 +395,8 @@
                     id="user-tel"
                     name="user-tel"
                     placeholder="Телефон"
+                    pattern="^\+[0-9]{12}"
+                    required
                   />
                 </div>
 
@@ -384,6 +410,7 @@
                     id="user-email"
                     name="user-email"
                     placeholder="Електронна пошта"
+                    required
                   />
                 </div>
 
@@ -422,25 +449,38 @@
             </div>
 
             <ul class="footer__menu">
-              <li>
+              <li class="footer__item-mobile-first--mb footer__item-tablet--mb">
                 <a class="link" href="#traditions-section">Наші традиції</a>
               </li>
-              <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
-              <li><a class="link" href="#formats-section">Формати</a></li>
-              <li><a class="link" href="#contacts-section">Контакти</a></li>
+
+              <li class="footer__item-mobile-first--mb footer__item-tablet--mb">
+                <a class="link" href="#chefs-section">Шеф-кухарі</a>
+              </li>
+
+              <li class="footer__item-mobile-first--mb footer__item-tablet--mb">
+                <a class="link" href="#formats-section">Формати</a>
+              </li>
+
+              <li class="footer__item-mobile-first--mb">
+                <a class="link" href="#contacts-section">Контакти</a>
+              </li>
             </ul>
           </nav>
 
           <address class="footer__address">
             <div class="footer__address-contacts">
               <ul class="footer__address-list">
-                <li>
+                <li
+                  class="footer__item-mobile-first--mb footer__item-tablet--mb"
+                >
                   <a class="footer__address-link" href="tel:+ 380960000007">
                     + 38 (096) 000 00 07</a
                   >
                 </li>
 
-                <li>
+                <li
+                  class="footer__item-mobile-first--mb footer__item-tablet--mb"
+                >
                   <a
                     class="footer__address-link"
                     href="mailto:shopbakery@gmail.com"
@@ -448,7 +488,7 @@
                   >
                 </li>
 
-                <li>
+                <li class="footer__address-list footer__address-list--mb">
                   <a
                     class="footer__address-link"
                     href="https://maps.app.goo.gl/czjTMKYWgjFAjaPS9"
@@ -457,15 +497,25 @@
                   >
                 </li>
 
-                <div>
+                <div
+                  class="footer__address-social footer__item-mobile-second--mb"
+                >
                   <a href="#">
-                    <svg class="footer__adress-icon" width="32px" height="32px">
+                    <svg
+                      class="footer__address-icon"
+                      width="32px"
+                      height="32px"
+                    >
                       <use href="./images/icons.svg#icon-facebook"></use>
                     </svg>
                   </a>
 
                   <a href="#">
-                    <svg class="footer__adress-icon" width="32px" height="32px">
+                    <svg
+                      class="footer__address-icon"
+                      width="32px"
+                      height="32px"
+                    >
                       <use href="./images/icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
@@ -474,7 +524,10 @@
             </div>
 
             <div class="footer__address-info">
-              <a class="footer__address-link" href="#" target="_blank"
+              <a
+                class="footer__address-link footer__item-mobile-second--mb footer__item-tablet--mb"
+                href="#"
+                target="_blank"
                 >Політика конфеденційності</a
               >
               <p class="footer__address-copyright">&copy; 2022 Дані захищені</p>
@@ -487,10 +540,16 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
-          Close
+          <svg class="modal__icon-close" width="32px" height="32px">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
         </button>
-        <h2>Замовити дзвінок</h2>
-        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <h2 class="modal__title section__title section__title--centered">
+          Замовити дзвінок
+        </h2>
+        <p class="modal__text text-brand-dark">
+          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
+        </p>
         <form name="modal-form" autocomplete="off">
           <div class="modal__form-field input">
             <label class="input__label visually-hidden" for="user-name"
@@ -517,6 +576,7 @@
               name="user-tel"
               placeholder="Телефон"
               pattern="^\+[0-9]{12}"
+              required
             />
           </div>
 
@@ -530,6 +590,7 @@
               id="user-email"
               name="user-email"
               placeholder="Електронна пошта"
+              required
             />
           </div>
 

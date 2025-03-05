@@ -5,6 +5,14 @@
     padding: 48px 0;
   }
 
+  &--contacts {
+    padding: 20px 0 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 48px 0 96px;
+    }
+  }
+
   &__title {
     font-size: 32px;
     font-weight: 900;

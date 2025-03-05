@@ -1,6 +1,4 @@
 .contacts-section {
-  padding-bottom: 96px;
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -39,8 +37,8 @@
     }
 
     @media screen and (min-width: $bp-desktop) {
-      width: 603px;
-      height: 595px;
+      width: 594px;
+      height: 594px;
     }
   }
 }

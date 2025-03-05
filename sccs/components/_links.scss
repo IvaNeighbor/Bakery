@@ -1,9 +1,16 @@
 .link {
+  font-size: 14px;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+
+  @media screen and (min-width: $bp-tablet) {
     color: var(--color-primary-light);
     text-decoration: none;
     transition: color 0.3s;
+  }
 }
 
 .link:hover {
-    color: var(--color-brand-normal);
+  color: var(--color-brand-normal);
 }

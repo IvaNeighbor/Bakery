@@ -29,14 +29,56 @@
   border-radius: 32px;
   overflow-y: auto;
 
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &::before {
+    width: 160px;
+    height: 160px;
+    background-image: url("/images/modal-decorate-text.png");
+  }
+
+  &::after {
+    width: 151px;
+    height: 233px;
+    background-image: url("/images/modal-decorate-bread.png");
+  }
+
   @media screen and (min-width: $bp-tablet) {
     padding: 128px;
   }
 
   &__btn-close {
+    border: none;
+    background-color: transparent;
     position: absolute;
     top: 40px;
     right: 40px;
+  }
+
+  &__icon-close {
+    fill: var(--color-primary-dark);
+    transition: fill 0.2s;
+  }
+
+  &__icon-close:hover {
+    fill: var(--color-brand-normal);
+  }
+
+  &__title {
+    white-space: nowrap;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 72px;
   }
 
   &__form-field {
