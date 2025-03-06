@@ -41,13 +41,13 @@
   &::before {
     width: 160px;
     height: 160px;
-    background-image: url("/images/modal-decorate-text.png");
+    background-image: url("../images/modal-decorate-text.png");
   }
 
   &::after {
     width: 151px;
     height: 233px;
-    background-image: url("/images/modal-decorate-bread.png");
+    background-image: url("../images/modal-decorate-bread.png");
   }
 
   @media screen and (min-width: $bp-tablet) {
