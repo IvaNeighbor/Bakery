@@ -55,4 +55,11 @@
     fill: var(--color-primary-dark);
     margin-bottom: 32px;
   }
+
+  &__link {
+    font-size: 14px;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
 }
